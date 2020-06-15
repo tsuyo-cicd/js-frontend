@@ -1,0 +1,17 @@
+resources: 
+  # Sample JS app in a GitRepo
+  - name: cicd_js_frontend_gitrepo
+    type: GitRepo
+    configuration:
+      path: tsuyo-cicd/js-frontend
+      branches:
+        include: master
+      gitProvider: tsuyo_github
+ 
+  # BuildInfo for the published JS app
+  - name: cicd_js_frontend_buildinfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: myArtifactory
+      buildName: cicd_js_frontend # ignored see https://www.jfrog.com/jira/browse/PIPE-2387
+      buildNumber: 1              # ignored see https://www.jfrog.com/jira/browse/PIPE-2387      
