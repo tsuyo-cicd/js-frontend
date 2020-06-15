@@ -11,6 +11,12 @@ pipelines:
             - name: cicd_js_frontend_gitrepo
           integrations:
             - name: myArtifactory
+        execution:
+          onStart:
+            - ls -l
+          onComplete:
+            - ls -l
+
  
       # - name: pack_frontend
       #   type: Bash
