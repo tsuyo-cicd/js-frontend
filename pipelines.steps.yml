@@ -13,9 +13,9 @@ pipelines:
             - name: myArtifactory
         execution:
           onStart:
-            - ls -l
+            - ls -l ${res_cicd_js_frontend_gitrepo_resourcePath}
           onComplete:
-            - ls -l
+            - ls -l ${res_cicd_js_frontend_gitrepo_resourcePath}
 
  
       # - name: pack_frontend
